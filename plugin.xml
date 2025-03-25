@@ -1,0 +1,22 @@
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cordova-plugin-bars-margin"
+    version="1.0.0">
+
+    <name>BarsMargin</name>
+    <description>Cordova Bars Margin Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova, bars, margin</keywords>
+
+    <platform name="android">
+        <source-file src="src/android/BarsMargin.java" target-dir="src/cordova/plugins/barsmargin"/>
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="BarsMargin">
+                <param name="android-package" value="cordova.plugins.barsmargin.BarsMargin"/>
+            </feature>
+        </config-file>
+    </platform>
+
+    <js-module name="BarsMargin" src="www/barsmargin.js">
+        <clobbers target="window.BarsMargin"/>
+    </js-module>
+</plugin>
